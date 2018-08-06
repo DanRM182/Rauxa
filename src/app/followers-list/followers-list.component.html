@@ -1,0 +1,18 @@
+<div class="row">
+    <div *ngFor="let follower of followers; let i = index;">
+        <div *ngIf="i % 5 == 0">
+            <div class="row">
+                <div class="column">
+                    <img (click)="seeFollower(followers[i])" src="{{ followers[i].avatar_url }}" alt="{{ followers[i].login }}" class="img-thumbnail list-img">
+                    <img *ngIf=" i+1 < followers.length" (click)="seeFollower(followers[i+1])"  src="{{ followers[i + 1].avatar_url }}" alt="{{ followers[i + 1].login }}" class="img-thumbnail list-img">
+                    <img *ngIf=" i+2 < followers.length" (click)="seeFollower(followers[i+2])"  src="{{ followers[i + 2].avatar_url }}" alt="{{ followers[i + 2].login }}" class="img-thumbnail list-img">
+                    <img *ngIf=" i+3 < followers.length" (click)="seeFollower(followers[i+3])"  src="{{ followers[i + 3].avatar_url }}" alt="{{ followers[i + 3].login }}" class="img-thumbnail list-img">
+                    <img *ngIf=" i+4 < followers.length" (click)="seeFollower(followers[i+4])"  src="{{ followers[i + 4].avatar_url }}" alt="{{ followers[i + 4].login }}" class="img-thumbnail list-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="moreFollowers">
+        <div (click)="addFollowers()">There are more!!</div>
+    </div>
+</div>

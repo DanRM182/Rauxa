@@ -1,0 +1,7 @@
+<img src="{{ follower.avatar_url }}" alt="{{ follower.login }}" class="img-thumbnail principal">
+<p *ngIf="follower.login!=null">Nickname: {{ follower.login }}</p>
+<p *ngIf="follower.id!=null">GitHub ID: {{ follower.id }}</p>
+<p *ngIf="follower.name!=null">Name: {{ follower.name }}</p>
+<p *ngIf='follower.email!=null'>Contact: {{ follower.email }}</p>
+<p *ngIf="follower.bio!=null">About follower: {{ follower.bio }}</p>
+<br>

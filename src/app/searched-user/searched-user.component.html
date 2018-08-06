@@ -1,0 +1,8 @@
+<img src="{{ user.avatar_url }}" alt="{{ user.login }}" class="img-thumbnail principal">
+<p *ngIf="user.login!=null">Nickname: {{ user.login }}</p>
+<p *ngIf="user.id!=null">GitHub ID: {{ user.id }}</p>
+<p *ngIf="user.name!=null">Name: {{ user.name }}</p>
+<p *ngIf='user.email!=null'>Contact: {{ user.email }}</p>
+<p *ngIf="user.bio!=null">About user: {{ user.bio }}</p>
+<p *ngIf="user.followers!=null">Followers qty: <b>{{ user.followers }}</b></p>
+<br>
